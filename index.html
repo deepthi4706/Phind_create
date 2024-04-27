@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e68c;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8b4513;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+        }
+        .story {
+            border: 1px solid #8b4513;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .review {
+            border: 1px solid #8b4513;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .registration-form {
+            display: none;
+        }
+        .registration-form input, .registration-form button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Time Tales</h1>
+        <button onclick="toggleRegistrationForm()">Register</button>
+    </header>
+    <div class="container">
+        <div class="story">
+            <h2>Story Title</h2>
+            <p>Story description...</p>
+            <button onclick="showReviewForm()">Review</button>
+        </div>
+        <div class="review">
+            <h2>Review</h2>
+            <p>Review content...</p>
+        </div>
+    </div>
+    <div class="registration-form">
+        <h2>Register</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button>Register</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Time Tales. All rights reserved.</p>
+    </div>
+    <script>
+        function toggleRegistrationForm() {
+            const form = document.querySelector('.registration-form');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+        function showReviewForm() {
+            alert('Review form functionality not implemented.');
+        }
+    </script>
+</body>
+</html>
